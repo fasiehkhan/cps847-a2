@@ -6,7 +6,7 @@ python:
 install: "pip install -r requirement.txt"
 script: 
 - coverage run test.py
-- docker image build -t 500900260/cps847-a2 .
+- docker image build -t 500900260/cps847-a2 
 
 
 

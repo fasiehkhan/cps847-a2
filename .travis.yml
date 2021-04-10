@@ -4,8 +4,13 @@ python:
   - "3.6"
   
 install: "pip install -r requirement.txt"
+
+services:
+- docker
+
 script: 
 - coverage run test.py
+- docker image build -t 500900260/cps847-a2
 
 
 

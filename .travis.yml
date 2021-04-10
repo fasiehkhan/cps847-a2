@@ -9,5 +9,5 @@ script: coverage run test.py
 
 after_success: 
 - bash <(curl -s https://codecov.io/bash)
-- docker push 500900260/cps847-a2:tagname
+- docker push 500900260/cps847-a2
 - docker ps -a

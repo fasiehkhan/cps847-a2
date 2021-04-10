@@ -5,3 +5,4 @@ python:
   
 install: "pip install -r requirement.txt"
 script: coverage run test.py
+after_success: bash <(curl -s https://codecov.io/bash)

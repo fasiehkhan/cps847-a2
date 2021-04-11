@@ -12,7 +12,7 @@ install: "pip install -r requirement.txt"
 
 script: 
 - coverage run test.py
-- docker image build -t fasiehkhan/cps847-a2 .
+- docker image build -t fasiehkhan123/cps847-a2 .
 
 after_success: 
 - bash <(curl -s https://codecov.io/bash)

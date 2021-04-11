@@ -4,5 +4,5 @@ def testFunc():
     if(isinstance(main.provideName(), str) == True):
         print("Passed test")
         print("-----------------------------------------")
-        print("OK)
+        print("OK")
 testFunc()

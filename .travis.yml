@@ -3,11 +3,19 @@ python:
   - "3.7"
   - "3.6"
   
+
+services:
+- docker
+
 install: "pip install -r requirement.txt"
 
 
 script: 
 - coverage run test.py
+- docker image build -t fasiehkhan/cps847-a2 .
 
 after_success: 
 - bash <(curl -s https://codecov.io/bash)
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- docker push fasiehkhan123/cps847-a2
+- docker ps -a
